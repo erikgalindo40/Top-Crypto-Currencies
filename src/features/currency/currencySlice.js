@@ -1,7 +1,7 @@
 
 import { createSlice } from '@reduxjs/toolkit'
 
-const initialState = [
+const initialState = {'data': [
     {
     "id": 1,
     "name": "Bitcoin",
@@ -82,18 +82,18 @@ const initialState = [
 }
 ]
 },
-]
+]}
 
 
 const currencySlice = createSlice({
   name: 'currency',
   initialState,
   reducers: {
-    getName(state) {
-      console.log(state[0].name)
+    addOneToPairs(state) {
+      state.data[0].num_market_pairs++
     },
   },
 })
 
-export const { getName } = currencySlice.actions
+export const { addOneToPairs } = currencySlice.actions
 export default currencySlice.reducer
