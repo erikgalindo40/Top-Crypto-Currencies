@@ -1,10 +1,12 @@
 import React from 'react'
 import CryptoHeader from './CryptoHeader'
+import Cryptocurrency from './Cryptocurrency'
 
 function CryptoContainer() {
   return (
     <div>
-        <CryptoHeader />
+        {/* <CryptoHeader /> */}
+        <Cryptocurrency/>
     </div>
   )
 }
