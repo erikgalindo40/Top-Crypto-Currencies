@@ -97,4 +97,17 @@ FOOTER STYLES
   display: flex;
   justify-content: space-between;
   margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.crypto-header {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 10px;
+}
+
+.crypto-header-item {
+  font-weight: bold;
 }
