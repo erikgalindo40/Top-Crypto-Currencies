@@ -103,17 +103,29 @@ HEADER STYLES
   margin-bottom: 2em;
 }
 
-.crypto-header {
+.crypto-header-container {
   display: flex;
   justify-content: space-between;
+  place-items: center;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
-  padding: 10px;
+  font-weight: bold;
+  padding: 1em;
 }
 
-.crypto-header-item {
-  font-weight: bold;
+.crypto-header-name-and-rank {
+  display: flex;
+  justify-content: space-between;
+  place-items: center;
+  gap: 2em;
+  margin-right: 6em;
 }
+
+.crypto-header-item-market-cap {
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
 
 /**********
 BODY STYLES 
