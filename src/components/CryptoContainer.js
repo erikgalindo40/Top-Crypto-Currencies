@@ -1,14 +1,15 @@
-import React from 'react'
-import { useSelector, useDispatch } from 'react-redux'
+// import React from 'react'
+// import { useSelector, useDispatch } from 'react-redux'
 import CryptoHeader from './CryptoHeader'
 import Cryptocurrency from './Cryptocurrency'
-import { getAsyncData } from '../features/currency/currencySlice'
+// import { getAsyncData } from '../features/currency/currencySlice'
+import { Link } from 'react-router-dom'
 
 function CryptoContainer() {
   // const { data } = useSelector( (state) => state.currency )
-  const dispatch=useDispatch()
+  // const dispatch=useDispatch()
 
-  dispatch(getAsyncData())
+  // dispatch(getAsyncData())
   
   return (
     <div>
@@ -25,6 +26,8 @@ function CryptoContainer() {
           //   />
           // ))
         }
+        <Cryptocurrency/>
+        <Link to='/test'>Go To Test Page</Link> 
     </div>
   )
 }
