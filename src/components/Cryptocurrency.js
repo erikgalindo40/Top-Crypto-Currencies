@@ -13,10 +13,10 @@ function Cryptocurrency({ logo,rank,name,acronym,price,marketCap,volume,circulat
                 </div>
             </a>
         </span>
-        <span className="currency-price">{price.toFixed(2)}</span>
-        <span className="currency-market-cap">{marketCap.toFixed(2)}</span>
-        <span className="currency-volume">{volume.toFixed(2)}</span>
-        <span className="currency-circulating-supply-info">{circulatingSupply.toFixed(2)}<span className="currency-circulating-supply-acronym">{acronym}</span></span>
+        <span className="currency-price">${price.toFixed(2)}</span>
+        <span className="currency-market-cap">${new Intl.NumberFormat('en-US', {maximumFractionDigits:0}).format(marketCap)}</span>
+        <span className="currency-volume">${new Intl.NumberFormat('en-US', {maximumFractionDigits:0}).format(volume)}</span>
+        <span className="currency-circulating-supply-info">{new Intl.NumberFormat('en-US', {maximumFractionDigits:0}).format(circulatingSupply)}<span className="currency-circulating-supply-acronym">{acronym}</span></span>
     </div>
     // rank, name, price, 
     // market cap, volume and circulating supply

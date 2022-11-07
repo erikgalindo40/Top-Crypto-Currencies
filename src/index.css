@@ -149,7 +149,7 @@ BODY STYLES
 .currency-name-and-rank {
   display: flex;
   gap: 2em;
-  min-width: 13em;
+  min-width: 17em;
   /* background-color: blue; */
 }
 .currency-logo {
@@ -166,11 +166,8 @@ BODY STYLES
 .currency-acronym {
   color: rgb(145, 145, 145);
 }
-.currency-circulating-supply-acronym {
-  margin-left: .3em;
-}
 .currency-price {
-  min-width: 4.5em;
+  min-width: 5em;
   /* background-color: red; */
 }
 .currency-market-cap {
@@ -178,10 +175,14 @@ BODY STYLES
   /* background-color: green; */
 }
 .currency-volume{
-  min-width: 8em;
+  min-width: 8.5em;
   /* background-color: red; */
 }
 .currency-circulating-supply-info {
-  min-width: 9em;
+  min-width: 13.5em;
   /* background-color: aqua; */
+}
+.currency-circulating-supply-acronym {
+  margin-left: .3em;
+  color: rgb(143, 143, 143);
 }
