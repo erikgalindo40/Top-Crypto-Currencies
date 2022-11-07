@@ -1,40 +1,33 @@
-// import React from 'react'
-// import { useSelector, useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux'
 import CryptoHeader from './CryptoHeader'
 import Cryptocurrency from './Cryptocurrency'
-// import { getAsyncData } from '../features/currency/currencySlice'
 import { Link } from 'react-router-dom'
 
 function CryptoContainer() {
-  // const { data } = useSelector( (state) => state.currency )
-  // const dispatch=useDispatch()
-
-  // dispatch(getAsyncData())
+  const { data } = useSelector( (state) => state.currency )
   
   return (
     <div>
         <CryptoHeader />
         {
-          // data.map( cryptocurrency => (
-          //   <Cryptocurrency
-          //     rank={data.id}
-          //     name={data.name}
-          //     price={data.market_pairs[0].quote.USD.price}
-          //     marketCap={100000000}
-          //     volume={data.market_pairs[0].quote.USD.volume_24h}
-          //     circulatingSupply={21000000}
-          //   />
-          // ))
+          Object.keys(data).map(cryptocurrency=> (
+            <Cryptocurrency
+              logo={data[cryptocurrency][0].logo} 
+              rank={data[cryptocurrency][0].cmc_rank}
+              name={data[cryptocurrency][0].name}
+              acronym={data[cryptocurrency][0].symbol}
+              price={data[cryptocurrency][0].quote.USD.price}
+              marketCap={data[cryptocurrency][0].quote.USD.market_cap}
+              volume={data[cryptocurrency][0].quote.USD.volume_24h}
+              circulatingSupply={data[cryptocurrency][0].circulating_supply}
+            />
+          ))
         }
-        <Cryptocurrency/>
+        {/* <Cryptocurrency/> */}
         <Link to='/test'>Go To Test Page</Link> 
     </div>
   )
 }
-// example
-//{crypto.map( crypto => (
-//    <Cryptocurrency price={crypto.price} />
-//))}
 
 // rank, name, price, market cap, volume and circulating supply
 

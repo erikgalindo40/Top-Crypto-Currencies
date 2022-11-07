@@ -37,7 +37,7 @@ code {
 FOOTER STYLES
 ************/
 .footer-container {
-  margin-top: 100vh;
+  margin-top: 2em;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -131,6 +131,7 @@ HEADER STYLES
 BODY STYLES 
 **********/
 .crypto-currency-container {
+  text-align: end;
   display: flex;
   justify-content: space-between;
   place-items: center;
@@ -148,6 +149,8 @@ BODY STYLES
 .currency-name-and-rank {
   display: flex;
   gap: 2em;
+  min-width: 13em;
+  /* background-color: blue; */
 }
 .currency-logo {
   height: 1.5em;
@@ -162,4 +165,23 @@ BODY STYLES
 }
 .currency-acronym {
   color: rgb(145, 145, 145);
+}
+.currency-circulating-supply-acronym {
+  margin-left: .3em;
+}
+.currency-price {
+  min-width: 4.5em;
+  /* background-color: red; */
+}
+.currency-market-cap {
+  min-width: 9em;
+  /* background-color: green; */
+}
+.currency-volume{
+  min-width: 8em;
+  /* background-color: red; */
+}
+.currency-circulating-supply-info {
+  min-width: 9em;
+  /* background-color: aqua; */
 }

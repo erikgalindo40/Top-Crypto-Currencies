@@ -2,9 +2,9 @@ export const cryptocurrencies = {
     "data":{
         "BTC":[
             {
-               "id":1,
-               "name":"Bitcoin",
-               "symbol":"BTC",
+               "id":1, //YUP
+               "name":"Bitcoin", //YUP
+               "symbol":"BTC", //YUP
                "slug":"bitcoin",
                "logo": "https://s2.coinmarketcap.com/static/img/coins/64x64/1.png",
                "num_market_pairs":9821,
@@ -152,11 +152,11 @@ export const cryptocurrencies = {
                   }
                ],
                "max_supply":21000000,
-               "circulating_supply":19199218,
+               "circulating_supply":19199218, //YUP
                "total_supply":19199218,
                "is_active":1,
                "platform":"None",
-               "cmc_rank":1,
+               "cmc_rank":1, //YUP
                "is_fiat":0,
                "self_reported_circulating_supply":"None",
                "self_reported_market_cap":"None",
@@ -164,7 +164,7 @@ export const cryptocurrencies = {
                "last_updated":"2022-11-05T20:37:00.000Z",
                "quote":{
                   "USD":{
-                     "price":21331.980034862474,
+                     "price":21331.980034862474, //YUP
                      "volume_24h":38781282085.64481,
                      "volume_change_24h":-39.25,
                      "percent_change_1h":0.04023341,
@@ -173,7 +173,7 @@ export const cryptocurrencies = {
                      "percent_change_30d":6.35668827,
                      "percent_change_60d":13.00744708,
                      "percent_change_90d":-8.22854142,
-                     "market_cap":409557335060.9722,
+                     "market_cap":409557335060.9722, //YUP
                      "market_cap_dominance":38.6135,
                      "fully_diluted_market_cap":447971580732.11,
                      "tvl":"None",
