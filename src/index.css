@@ -186,3 +186,29 @@ BODY STYLES
   margin-left: .3em;
   color: rgb(143, 143, 143);
 }
+
+/****************** 
+DETAILS PAGE STYLES
+******************/
+
+.details-page-container {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+/* DETAILED NAME*/
+.detailed-name-container {
+  background-color: blue;
+}
+
+/* DETAILED PRICE*/
+.detailed-price-container {
+  background-color: red;
+}
+
+/* DETAILED INFO*/
+.detailed-info-container {
+  background-color: green;
+}
