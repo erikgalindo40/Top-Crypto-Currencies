@@ -1,7 +1,6 @@
 import { useSelector } from 'react-redux'
 import CryptoHeader from './CryptoHeader'
 import Cryptocurrency from './Cryptocurrency'
-import { Link } from 'react-router-dom'
 
 function CryptoContainer() {
   const { data } = useSelector( (state) => state.currency )
@@ -10,8 +9,9 @@ function CryptoContainer() {
     <div>
         <CryptoHeader />
         {
-          Object.keys(data).map(cryptocurrency=> (
+          Object.keys(data).map((cryptocurrency, index)=> (
             <Cryptocurrency
+              key={index}
               logo={data[cryptocurrency][0].logo} 
               rank={data[cryptocurrency][0].cmc_rank}
               name={data[cryptocurrency][0].name}
@@ -23,12 +23,8 @@ function CryptoContainer() {
             />
           ))
         }
-        {/* <Cryptocurrency/> */}
-        <Link to='/test'>Go To Test Page</Link> 
     </div>
   )
 }
-
-// rank, name, price, market cap, volume and circulating supply
 
 export default CryptoContainer

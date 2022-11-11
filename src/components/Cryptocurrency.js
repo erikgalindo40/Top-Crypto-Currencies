@@ -1,25 +1,35 @@
-// import React from 'react'
+// import { useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 function Cryptocurrency({ logo,rank,name,acronym,price,marketCap,volume,circulatingSupply }) {
+  const data={
+    logo,
+    rank,
+    name,
+    acronym,
+    price,
+    marketCap,
+    volume,
+    circulatingSupply
+  }
+
   return (
     <div className="crypto-currency-container">
         <span className="currency-name-and-rank">
             <span className="currency-rank">{rank}</span>
-            <a href="/" className="currency-full-name">
+            <Link to="/cryptodetail" state={data} className="currency-full-name">
                 <div className="currency-names">
                     <img className="currency-logo" src={logo} alt="Bitcoin Logo" />
                     <span>{name}</span>
                     <span className="currency-acronym">{acronym}</span>
                 </div>
-            </a>
+            </Link>
         </span>
         <span className="currency-price">${price.toFixed(2)}</span>
         <span className="currency-market-cap">${new Intl.NumberFormat('en-US', {maximumFractionDigits:0}).format(marketCap)}</span>
         <span className="currency-volume">${new Intl.NumberFormat('en-US', {maximumFractionDigits:0}).format(volume)}</span>
         <span className="currency-circulating-supply-info">{new Intl.NumberFormat('en-US', {maximumFractionDigits:0}).format(circulatingSupply)}<span className="currency-circulating-supply-acronym">{acronym}</span></span>
     </div>
-    // rank, name, price, 
-    // market cap, volume and circulating supply
   )
 }
 

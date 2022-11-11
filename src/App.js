@@ -2,7 +2,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import CryptoContainer from "./components/CryptoContainer";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Test from "./pages/Test";
+import CryptoDetail from "./pages/CryptoDetail";
 
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
     <Header />
     <Routes>
       <Route path="/" element={<CryptoContainer />}/>
-      <Route path="/test" element={<Test />}/>
+      <Route path="/cryptodetail" element={<CryptoDetail />}/>
     </Routes>
     <Footer />
       </div>
