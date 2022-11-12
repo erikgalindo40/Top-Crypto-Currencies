@@ -11,11 +11,11 @@ const Headersearch = props => {
     // after waiting period of .5 seconds after previous call to event
     const debouncedHandleChange = useMemo(
         () => {
-            const handleChange = e => {
-                dispatch(searchReducer(e.target.value))
+                const handleChange = e => {
+                    dispatch(searchReducer(e.target.value))
+                }
+                return debounce(handleChange, 500)
             }
-            debounce(handleChange, 500)
-        }
     , [dispatch])
 
     return (

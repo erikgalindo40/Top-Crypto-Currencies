@@ -9,17 +9,17 @@ function CryptoContainer() {
     <div>
         <CryptoHeader />
         {
-          Object.keys(data).map((cryptocurrency, index)=> (
+          Object.keys(filteredData).map((cryptocurrency, index)=> (
             <Cryptocurrency
               key={index}
-              logo={data[cryptocurrency][0].logo} 
-              rank={data[cryptocurrency][0].cmc_rank}
-              name={data[cryptocurrency][0].name}
-              acronym={data[cryptocurrency][0].symbol}
-              price={data[cryptocurrency][0].quote.USD.price}
-              marketCap={data[cryptocurrency][0].quote.USD.market_cap}
-              volume={data[cryptocurrency][0].quote.USD.volume_24h}
-              circulatingSupply={data[cryptocurrency][0].circulating_supply}
+              logo={filteredData[cryptocurrency][0].logo} 
+              rank={filteredData[cryptocurrency][0].cmc_rank}
+              name={filteredData[cryptocurrency][0].name}
+              acronym={filteredData[cryptocurrency][0].symbol}
+              price={filteredData[cryptocurrency][0].quote.USD.price}
+              marketCap={filteredData[cryptocurrency][0].quote.USD.market_cap}
+              volume={filteredData[cryptocurrency][0].quote.USD.volume_24h}
+              circulatingSupply={filteredData[cryptocurrency][0].circulating_supply}
             />
           ))
         }
