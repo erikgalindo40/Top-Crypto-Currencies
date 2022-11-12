@@ -7,10 +7,10 @@ function CryptoHeader() {
             <span>#</span>
             <span>Name</span>
         </div>
-        <span>Price</span>
-        <span className='crypto-header-item-market-cap'>Market Cap</span>
-        <span>Volume(24h)</span>
-        <span>Circulating Supply</span>
+        <span className='crypto-header-price'>Price</span>
+        <span className='crypto-header-market-cap'>Market Cap</span>
+        <span className='crypto-header-volume'>Volume(24h)</span>
+        <span className='crypto-header-circulating-supply'>Circulating Supply</span>
     </div>
   )
 }

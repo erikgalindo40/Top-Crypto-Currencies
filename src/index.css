@@ -105,6 +105,7 @@ HEADER STYLES
 
 .crypto-header-container {
   display: flex;
+  text-align: end;
   justify-content: space-between;
   place-items: center;
   border-top: 1px solid black;
@@ -115,15 +116,23 @@ HEADER STYLES
 
 .crypto-header-name-and-rank {
   display: flex;
-  justify-content: space-between;
   place-items: center;
   gap: 2em;
-  margin-right: 6em;
+  min-width: 17em;
 }
 
-.crypto-header-item-market-cap {
-  margin-left: 2em;
-  margin-right: 2em;
+.crypto-header-price {
+  min-width: 5em;
+}
+.crypto-header-market-cap {
+  min-width: 9em;
+}
+.crypto-header-volume{
+  min-width: 8.5em;
+}
+
+.crypto-header-circulating-supply {
+  min-width: 13.5em;
 }
 
 
