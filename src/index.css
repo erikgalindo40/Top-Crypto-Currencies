@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  margin-inline: 2em;
+  margin-inline: 1em;
   height: 100%;
   background-color: aliceblue;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -200,24 +200,87 @@ BODY STYLES
 DETAILS PAGE STYLES
 ******************/
 
+/*main grid: FLEX layout
+  section 1: FLEX column layout
+  section 2: FLEX column layout
+  section 3: FLEX column layout
+  */
+
 .details-page-container {
-  background-color: white;
+  /* background-color: white; */
   display: flex;
   flex-direction: column;
   gap: 1em;
 }
 
+@media (min-width:800px) { 
+  /*main grid: 2x2 GRID layout
+  section 1: FLEX column layout
+  section 2: FLEX column layout
+  section 3: 2x3 GRID layout with 4 subsections: subsection 4 SPAN 3
+  */
+  .details-page-container {
+    background-color: aqua;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+  }
+
+  .detailed-info-container {
+    grid-column: 1/3;
+  }
+}
+
+@media (min-width:1000px) { 
+  /*main grid: 2x2 GRID layout
+  section 1: FLEX column layout
+  section 2: FLEX column layout
+  section 3: FLEX column layout OR 4 COLUMN GRID layout - GRID SPAN 2
+  */
+  .details-page-container {
+    background-color: violet;
+  }
+}
+
+@media (min-width:1375px) {
+  /*main grid: 3x3 GRID layout
+  section 1: FLEX column layout - GRID SPAN 1/4
+  section 2: FLEX column layout - GRID SPAN 2
+  section 3: FLEX column layout OR 4 COLUMN GRID layout - GRID SPAN 2
+  */
+  .details-page-container {
+    background-color: greenyellow;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2, auto);
+  }
+
+  .detailed-name-container {
+    height: 100% !important; 
+    grid-row: 1/3;
+  }
+  .detailed-info-container {
+    grid-column: 2/4;
+  }
+  .detailed-price-container {
+    grid-column: 2/4;
+  }
+}
+
 /* DETAILED NAME*/
 .detailed-name-container {
   background-color: blue;
+  height: 6em;
 }
 
 /* DETAILED PRICE*/
 .detailed-price-container {
   background-color: red;
+  height: 6em;
 }
 
 /* DETAILED INFO*/
 .detailed-info-container {
   background-color: green;
+  height: 22em;
 }

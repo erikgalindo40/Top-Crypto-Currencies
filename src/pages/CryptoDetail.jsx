@@ -17,13 +17,15 @@ function CryptoDetail() {
   const location = useLocation()
   const data = location.state
   return (
-    <div className='details-page-container'>
+    <>
     <h1>THIS IS {data.name}'s PAGE</h1>
+    <div className='details-page-container'>
     <DetailedName />
     <DetailedPrice />
     <DetailedInfo />
-    <Link to={'/'}>TO HOME PAGE</Link>
     </div>
+    <Link to={'/'}>TO HOME PAGE</Link>
+    </>
   )
 }
 
