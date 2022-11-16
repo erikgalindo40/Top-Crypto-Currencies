@@ -6,7 +6,7 @@ function CryptoContainer() {
   const { filteredData } = useSelector( (state) => state.currency )
   
   return (
-    <div>
+    <div className='body-container'>
         <CryptoHeader />
         {
           Object.keys(filteredData).map((cryptocurrency, index)=> (

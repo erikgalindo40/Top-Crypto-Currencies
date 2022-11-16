@@ -1,4 +1,4 @@
-import { Link, useLocation } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 import DetailedName from '../components/DetailComponents/DetailedName'
 import DetailedPrice from '../components/DetailComponents/DetailedPrice'
 import DetailedInfoContainer from '../components/DetailComponents/DetailedInfoContainer'
@@ -12,11 +12,14 @@ import DetailedInfoContainer from '../components/DetailComponents/DetailedInfoCo
 // marketCap,
 // volume,
 // circulatingSupply
+// maxSupply,
+// totalSupply
+// fullyDilutedMarketCap
 
 function CryptoDetail() {
   const location = useLocation()
   const data = location.state
-  console.log(data.maxSupply)
+  
   return (
     <>
     <div className='details-page-container'>
@@ -41,7 +44,6 @@ function CryptoDetail() {
     fullyDilutedMarketCap={data.fullyDilutedMarketCap}
     />
     </div>
-    <Link to={'/'}>TO HOME PAGE</Link>
     </>
   )
 }

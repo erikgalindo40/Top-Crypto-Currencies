@@ -99,8 +99,14 @@ HEADER STYLES
 .header-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-top: 2em;
   margin-bottom: 2em;
+}
+
+.header-title {
+  text-decoration: none;
+  color: black;
 }
 
 .crypto-header-container {
@@ -112,6 +118,7 @@ HEADER STYLES
   border-bottom: 1px solid black;
   font-weight: bold;
   padding: 1em;
+  min-width: max-content;
 }
 
 .crypto-header-name-and-rank {
@@ -139,6 +146,23 @@ HEADER STYLES
 /**********
 BODY STYLES 
 **********/
+.body-container {
+  overflow-x: scroll;
+  box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.348);
+}
+.body-container::-webkit-scrollbar {
+  width: 100%;
+  height: .4em;
+}
+.body-container::-webkit-scrollbar-track {
+  background: rgb(162, 162, 162);
+  border-radius: 1px;
+}
+
+.body-container::-webkit-scrollbar-thumb {
+  background: rgb(57, 57, 57);
+}
+
 .crypto-currency-container {
   text-align: end;
   display: flex;
@@ -149,7 +173,9 @@ BODY STYLES
   border-top: 1px solid rgb(226, 226, 226);
   border-bottom: 1px solid rgb(226, 226, 226);
   font-weight: 600;
-  overflow-x: hidden;
+  width: 100%;
+  min-width: fit-content;
+
 }
 .crypto-currency-container:hover {
   background-color: rgb(230, 242, 255);
