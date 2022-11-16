@@ -1,7 +1,7 @@
 // import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 
-function Cryptocurrency({ logo,rank,name,acronym,price,marketCap,volume,circulatingSupply }) {
+function Cryptocurrency({ logo,rank,name,acronym,price,marketCap,volume,circulatingSupply, maxSupply, totalSupply, fullyDilutedMarketCap }) {
   const data={
     logo,
     rank,
@@ -10,7 +10,10 @@ function Cryptocurrency({ logo,rank,name,acronym,price,marketCap,volume,circulat
     price,
     marketCap,
     volume,
-    circulatingSupply
+    circulatingSupply,
+    maxSupply,
+    totalSupply,
+    fullyDilutedMarketCap
   }
 
   return (

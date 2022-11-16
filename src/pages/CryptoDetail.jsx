@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom'
 import DetailedName from '../components/DetailComponents/DetailedName'
 import DetailedPrice from '../components/DetailComponents/DetailedPrice'
-import DetailedInfo from '../components/DetailComponents/DetailedInfo'
+import DetailedInfoContainer from '../components/DetailComponents/DetailedInfoContainer'
 
 // WHAT DATA CONSISTS OF:
 // logo,
@@ -16,13 +16,26 @@ import DetailedInfo from '../components/DetailComponents/DetailedInfo'
 function CryptoDetail() {
   const location = useLocation()
   const data = location.state
+  console.log(data.maxSupply)
   return (
     <>
     <h1>THIS IS {data.name}'s PAGE</h1>
     <div className='details-page-container'>
     <DetailedName />
     <DetailedPrice />
-    <DetailedInfo />
+    <DetailedInfoContainer 
+    name={data.name}
+    logo={data.logo}
+    rank={data.rank}
+    acronym={data.acronym}
+    price={data.price}
+    marketCap={data.marketCap}
+    volume={data.volume}
+    circulatingSupply={data.circulatingSupply}
+    maxSupply={data.maxSupply}
+    totalSupply={data.totalSupply}
+    fullyDilutedMarketCap={data.fullyDilutedMarketCap}
+    />
     </div>
     <Link to={'/'}>TO HOME PAGE</Link>
     </>
