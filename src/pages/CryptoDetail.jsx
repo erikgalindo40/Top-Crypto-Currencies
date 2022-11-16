@@ -19,9 +19,13 @@ function CryptoDetail() {
   console.log(data.maxSupply)
   return (
     <>
-    <h1>THIS IS {data.name}'s PAGE</h1>
     <div className='details-page-container'>
-    <DetailedName />
+    <DetailedName
+    name={data.name}
+    logo={data.logo}
+    rank={data.rank}
+    acronym={data.acronym}
+    />
     <DetailedPrice />
     <DetailedInfoContainer 
     name={data.name}

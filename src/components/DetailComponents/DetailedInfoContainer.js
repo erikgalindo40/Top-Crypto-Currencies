@@ -14,7 +14,7 @@ function DetailedInfoContainer({ acronym, marketCap, volume, circulatingSupply, 
   }
   const circulatingSupplyInfo={
     title:'Circulating Supply',
-    value: `$${new Intl.NumberFormat('en-US', {maximumFractionDigits:0}).format(circulatingSupply)} ${acronym}`,
+    value: `${new Intl.NumberFormat('en-US', {maximumFractionDigits:0}).format(circulatingSupply)} ${acronym}`,
     additionalInfo: [
       {
         title: 'Max Supply',

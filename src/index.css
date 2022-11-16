@@ -215,8 +215,39 @@ DETAILS PAGE STYLES
 
 /* DETAILED NAME*/
 .detailed-name-container {
-  background-color: blue;
-  height: 6em;
+  /* background-color: blue; */
+  padding-block: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.detailed-name-and-logo {
+  display: flex;
+  align-items: center;
+  gap: .8em;
+}
+
+.detailed-name-logo {
+  height: 2.5em;
+}
+
+.detailed-name-acronym {
+  padding-inline: 0.5em;
+  background-color: rgb(220, 220, 220);
+  border-radius: 5px;
+  color: rgb(52, 52, 52);
+  font-size: .9em;
+}
+
+.detailed-name-rank {
+  padding: .3em;
+  padding-block: .2em;
+  border-radius: 5px;
+  background-color: rgb(110, 110, 110);
+  font-size: small;
+  color: white;
+  width: fit-content;
 }
 
 /* DETAILED PRICE*/
