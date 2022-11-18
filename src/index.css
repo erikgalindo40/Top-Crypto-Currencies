@@ -278,8 +278,13 @@ DETAILS PAGE STYLES
 
 /* DETAILED PRICE*/
 .detailed-price-container {
-  background-color: red;
+  display: flex;
+  flex-direction: column;
   height: 6em;
+}
+
+.detailed-price-price {
+  font-weight: bold;
 }
 
 /* DETAILED INFO*/

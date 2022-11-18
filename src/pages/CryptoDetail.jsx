@@ -29,7 +29,11 @@ function CryptoDetail() {
     rank={data.rank}
     acronym={data.acronym}
     />
-    <DetailedPrice />
+    <DetailedPrice 
+    name={data.name}
+    acronym={data.acronym}
+    price={data.price}
+    />
     <DetailedInfoContainer 
     name={data.name}
     logo={data.logo}

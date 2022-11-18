@@ -28,7 +28,15 @@ function Cryptocurrency({ logo,rank,name,acronym,price,marketCap,volume,circulat
                 </div>
             </Link>
         </span>
-        <span className="currency-price">${price.toFixed(2)}</span>
+        <span className="currency-price">
+          ${
+            parseFloat(price.toFixed(2))>1 || price.toFixed(2)==='0.00'
+            ? parseFloat(price.toFixed(2))<1
+              ? new Intl.NumberFormat('en-US', {maximumSignificantDigits:2}).format(price)
+              : new Intl.NumberFormat('en-US', {maximumFractionDigits:2}).format(price)
+            : price.toFixed(2)
+          }
+        </span>
         <span className="currency-market-cap">${new Intl.NumberFormat('en-US', {maximumFractionDigits:0}).format(marketCap)}</span>
         <span className="currency-volume">${new Intl.NumberFormat('en-US', {maximumFractionDigits:0}).format(volume)}</span>
         <span className="currency-circulating-supply-info">{new Intl.NumberFormat('en-US', {maximumFractionDigits:0}).format(circulatingSupply)}<span className="currency-circulating-supply-acronym">{acronym}</span></span>
