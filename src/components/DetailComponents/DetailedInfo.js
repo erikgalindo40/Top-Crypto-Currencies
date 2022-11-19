@@ -3,6 +3,7 @@ import DetailedAdditionalInfo from './DetailedAdditionalInfo'
 
 function DetailedInfo({ info }) {
   // console.log(info)
+  
   return (
     <>
     <div className='detailed-info-wrapper'>
@@ -12,6 +13,7 @@ function DetailedInfo({ info }) {
       </div>
       {info.additionalInfo&&
       <div>
+      {info.additionalInfo[0].value!=='--'&&<progress style={{width:'100%'}} max={1} value={parseInt(info.additionalInfo[1].value)/parseInt(info.additionalInfo[0].value).toFixed(3)}></progress>}
       <DetailedAdditionalInfo name={info.additionalInfo[0].title} value={info.additionalInfo[0].value}/>
       <DetailedAdditionalInfo name={info.additionalInfo[1].title} value={info.additionalInfo[1].value}/>
       </div>
