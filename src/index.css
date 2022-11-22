@@ -51,7 +51,9 @@ FOOTER STYLES
 }
 
 .footer-title {
-  margin-bottom: 2em;
+  margin-bottom: 1em;
+  font-size: 2em;
+  font-weight: bold;
 }
 
 .footer-lists {
