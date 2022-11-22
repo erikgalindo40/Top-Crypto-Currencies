@@ -7,9 +7,9 @@ export default function Header() {
     return (
         <div className="header-container">
             <h1>
-                <Link className="header-title" to={'/'}>Top Crypto Currencies</Link>
+                <Link className="header-title" to={'/Top-Crypto-Currencies'}>Top Crypto Currencies</Link>
             </h1>
-            {location.pathname==='/'&&<Headersearch />}
+            {location.pathname==='/Top-Crypto-Currencies'&&<Headersearch />}
         </div>
     )
 }

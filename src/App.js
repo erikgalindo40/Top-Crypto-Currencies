@@ -13,7 +13,7 @@ function App() {
       <div className="container">
     <Header />
     <Routes>
-      <Route path="/" element={<CryptoContainer />}/>
+      <Route path="/Top-Crypto-Currencies" element={<CryptoContainer />}/>
       <Route path="/cryptodetail" element={<CryptoDetail />}/>
     </Routes>
     <Footer />
