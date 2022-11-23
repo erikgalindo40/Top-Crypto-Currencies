@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Top-Crypto-Currencies/static/css/main.974d717b.css",
+    "main.css": "/Top-Crypto-Currencies/static/css/main.666d25f5.css",
     "main.js": "/Top-Crypto-Currencies/static/js/main.ec322685.js",
     "index.html": "/Top-Crypto-Currencies/index.html",
-    "main.974d717b.css.map": "/Top-Crypto-Currencies/static/css/main.974d717b.css.map",
+    "main.666d25f5.css.map": "/Top-Crypto-Currencies/static/css/main.666d25f5.css.map",
     "main.ec322685.js.map": "/Top-Crypto-Currencies/static/js/main.ec322685.js.map"
   },
   "entrypoints": [
-    "static/css/main.974d717b.css",
+    "static/css/main.666d25f5.css",
     "static/js/main.ec322685.js"
   ]
 }
