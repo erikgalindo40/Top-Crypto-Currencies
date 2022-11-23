@@ -8,12 +8,18 @@
 
 html {
   width: 100%;
+  min-height: 100vh;
+}
+
+.container {
   height: 100%;
+  min-height: 100vh;
+  display: flex;flex-direction: column;justify-content: space-between;
 }
 
 body {
-  margin-inline: 1em;
-  height: 100%;
+  margin-inline: 1em;padding: 0;
+  min-height: 100vh;
   background-color: aliceblue;
   overflow-x: hidden;
 
@@ -44,10 +50,6 @@ FOOTER STYLES
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
-  padding-inline: 10em;
-  margin-inline: -10em;
-  background-color: white;
 }
 
 .footer-title {
@@ -66,7 +68,6 @@ FOOTER STYLES
 
 .footer-list {
   margin: 0;padding: 0;
-  margin-right: 8em;
   list-style-type: none;
 }
 .footer-list-title {
@@ -81,7 +82,7 @@ FOOTER STYLES
   color: rgb(80, 80, 80);
 }
 
-@media (min-width: 950px) {
+@media (min-width: 750px) {
   .footer-container {
     display: flex;
     flex-direction: column;
@@ -89,7 +90,7 @@ FOOTER STYLES
 
   .footer-lists {
     display: flex;
-    gap: 6em;
+    gap: 8em;
   }
 }
 
@@ -109,17 +110,14 @@ HEADER STYLES
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* margin-top: 2em;
-  margin-bottom: 2em; */
 
   padding-block: 1em;
   margin-bottom: 1em;
+}
 
-  background-color: rgb(205, 226, 244);
-  padding-inline: 10em;
-  margin-inline: -10em;
-
-  box-shadow: 0 -1px 5px grey;
+.header-container input {
+  /* search bar styling */
+  width: 8em;
 }
 
 .header-title {
@@ -390,9 +388,6 @@ DETAILS PAGE STYLES
     section 2: FLEX column layout
     section 3: FLEX column layout OR 4 COLUMN GRID layout - GRID SPAN 2
     */
-    .details-page-container {
-      /* background-color: violet; */
-    }
 
     /* detailed info */
     .detailed-info-container{
